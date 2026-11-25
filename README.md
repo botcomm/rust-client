@@ -140,7 +140,7 @@ After `Bot::run`, use `bot.set_online_status_visible(true).await?` to show the b
 
 ## Receive-only mode and collections
 
-Use input mode `none` for a receive-only chat. Session settings remain available; user messages, commands, and keyboard answers are rejected. Publish native session collections with `register_collections`, `Event::CollectionRequest`, and `respond_collection`. Register the schema before enabling `none`. Persist and atomically compare/increment list revisions on mutations, reject expired requests, and return results outside chat history.
+Use input mode `none` for a receive-only chat. The composer is hidden. Users can still answer buttons, respond to cards, react to messages, and change session settings. Publish native session collections with `register_collections`, `Event::CollectionRequest`, and `respond_collection`. Register the schema before enabling `none`. Persist and atomically compare/increment list revisions on mutations, reject expired requests, and return results outside chat history.
 
 ## Streaming replies and reactions
 
